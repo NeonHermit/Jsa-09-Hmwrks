@@ -1,0 +1,17 @@
+[
+    {
+        "name": "American Ninja",
+        "year": 1985,
+        "genres": "ninja"
+    },
+    {
+        "name": "The seventh seal",
+        "year": 1957,
+        "genres": "fantasy"
+    },
+    {
+        "name": "Goonies",
+        "year": 1985,
+        "genres": "adventure"
+    }
+]
