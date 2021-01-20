@@ -36,7 +36,6 @@ const remove = async (id) => {
     await Actors.deleteOne({ _id: id });
 };
 
-
 module.exports = {
     getAll,
     getOne,
