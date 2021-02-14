@@ -1,4 +1,4 @@
-const {getCharacter, getLocation} = require('rickmortyapi');
+const pickle = require('rickmortyapi');
 
 let cache = {};
 
@@ -10,7 +10,7 @@ const getChar = async (req, res) => {
             return;
         }
 
-        let data = await getCharacter([req.params.id]);
+        let data = await pickle.getCharacter([req.params.id]);
         cache[req.params.id] = {
             timestamp: new Date().getTime(),
             data: data
@@ -24,7 +24,7 @@ const getChar = async (req, res) => {
 
 const getAllLocations = async (req, res) => {
     try {
-        let data = await getLocation();
+        let data = await pickle.getLocation();
         res.status(200).send(data);
     } catch(err) {
         console.log(err);
